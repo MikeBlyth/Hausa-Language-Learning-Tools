@@ -1,0 +1,44 @@
+﻿<canvas height="200" width="100%" >
+  <splash/>
+  <resource src="resources/pronunciation/fili_ne.mp3" name="fili_ne"/>
+  <resource src="resources/pronunciation/ya_fafe.mp3" name="ya_fafe"/>
+  <resource src="resources/pronunciation/ya_yi_fes.mp3" name="ya_yi_fes" />
+  <resource src="resources/images/play_40.png" name="play"/>
+  <simplelayout axis="y" spacing='0'/>
+  <view width='560' height='2' bgcolor='#606060'/>
+  <view font="Times New Roman" fontsize="18" height='50' bgcolor="#e0ffe0">
+    <simplelayout axis="x" spacing="4"/>
+    <view width='2' height='50' bgcolor='#606060'/>
+	<text width='70' valign='middle' >fīlī nḕ</text>
+    <view width='1' height='50' bgcolor='#606060'/>
+    <view valign='middle' resource="play" width='60' onclick="lz.Audio.playSound('fili_ne');"/>
+    <view width='1' height='50' bgcolor='#606060'/>
+	<text width='400' multiline='true' valign='middle'>
+	   This is a good example of the sound when it’s between an <i>f</i> and a <i>p</i>.
+	</text>
+    <view width='2' height='50' bgcolor='#606060'/>
+  </view>
+  <view width='560' height='1' bgcolor='#606060'/>
+  <view font="Times New Roman" fontsize="18" height='50'>
+    <simplelayout axis="x" spacing="4"/>
+    <view width='2' height='50' bgcolor='#606060'/>
+	<text width='70' valign='middle'  >yā fāfḕ</text>
+    <view width='1' height='50' bgcolor='#606060'/>
+    <view resource="play" valign='middle'  width='60' onclick="lz.Audio.playSound('ya_fafe');"/>
+    <view width='1' height='50' bgcolor='#606060'/>
+	<view width='400'/>
+    <view width='2' height='50' bgcolor='#606060'/>
+	</view>
+  <view width='560' height='1' bgcolor='#606060'/>
+  <view font="Times New Roman" fontsize="18" height='50'>
+    <simplelayout axis="x" spacing="4"/>
+    <view width='2' height='50' bgcolor='#606060'/>
+	<text width='70' valign='middle'  >yā yi fes</text>
+    <view width='1' height='50' bgcolor='#606060'/>
+    <view resource="play" width='60' valign='middle'  onclick="lz.Audio.playSound('ya_yi_fes');"/>
+    <view width='1' height='50' bgcolor='#606060'/>
+	<view width='400'/>
+    <view width='2' height='50' bgcolor='#606060'/>  
+  </view>
+  <view width='560' height='2' bgcolor='#606060'/>
+</canvas>

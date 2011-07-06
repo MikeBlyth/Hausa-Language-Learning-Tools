@@ -1,0 +1,29 @@
+﻿<canvas height="220" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/minimal_pairs/hamma_hama.mp3" name="hamma_hama"/>
+  <resource src="resources/minimal_pairs/kulle_kule.mp3" name="kulle_kule"/>
+  <resource src="resources/minimal_pairs/manna_mana.mp3" name="manna_mana"/>
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowHead>
+    <TextBox width='160'  height='50' text="Long (double) consonant"/>
+    <TextBox width='160'  height='50' text="Single (short) consonant"/>
+    <TextBox width='70' height='50'  text="Listen and compare"/>
+  </TableRowHead>
+  <TableRowOdd >
+    <TextBox width='160' height='50' text="mannà (press against)"/>
+    <TextBox width='160' height='50' text="manà (for us)"/>
+    <TextWithPlay width='70' height='50' text="" sound='manna_mana'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextBox width='160' height='50' text="kullḕ (lock)"/>
+    <TextBox width='160' height='50' text="kulḕ (cat)"/>
+    <TextWithPlay width='70' height='50' text="" sound='kulle_kule'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextBox width='160' height='50' text="hammā̀ (yawning)"/>
+    <TextBox width='160' height='50' text="hamā̀ (hammer)"/>
+    <TextWithPlay width='70' height='50' text="" sound='hamma_hama'/>
+  </TableRowOdd>
+</canvas>

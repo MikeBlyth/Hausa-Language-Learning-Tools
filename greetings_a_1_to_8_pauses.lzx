@@ -1,0 +1,24 @@
+﻿<canvas height="70" width="140" >
+  <resource src="resources/conversations/conversation_1_lines_1-4_with_pauses.mp3" name="lines_1_4"/>
+  <resource src="resources/conversations/conversation_1_lines_5-8_with_pauses.mp3" name="lines_5_8"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <simplelayout axis='x' spacing='20' />
+  <view>
+	  <simplelayout axis='y' spacing='0' />
+	  <PlayButton sound='lines_1_4' />
+      <text>Lines 1-4</text>
+  </view>
+  <view>
+	  <simplelayout axis='y' spacing='0' />
+      <PlayButton sound='lines_5_8' />
+      <text>Lines 5-8</text>
+  </view>
+	  
+  </canvas>

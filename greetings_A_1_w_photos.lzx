@@ -1,0 +1,18 @@
+﻿<canvas height="300" width="100%" >
+  <resource src="resources/images/mallam_garba_200.jpg" name="mallam_garba"/>
+  <resource src="resources/images/woman_1_200.jpg" name="woman_1"/>
+  <resource src="resources/conversations/conv_1_all.mp3" name="conversation_1"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <simplelayout axis="x" spacing='30'/>
+  <view resource='mallam_garba' />
+  <PlayButton sound='conversation_1' />
+  <view resource='woman_1' />
+  </canvas>

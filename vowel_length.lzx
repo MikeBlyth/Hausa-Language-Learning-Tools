@@ -1,0 +1,24 @@
+﻿<canvas height="180" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/shi_ne.mp3" name="shi_ne"/>
+  <resource src="resources/pronunciation/menene.mp3" name="menene"/>
+  <resource src="resources/pronunciation/ciki_ne.mp3" name="ciki_ne"/>
+  <resource src="resources/pronunciation/fensir_ne_penti_ne.mp3" name="fensir_ne_penti_ne"/>
+  <resource src="resources/pronunciation/rana_ce.mp3" name="rana_ce"/>
+  <resource src="resources/pronunciation/takwas_ne.mp3" name="takwas_ne"/>
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text="shī nḕ" sound='shi_ne'/>
+    <TextWithPlay width='180' height='50' text="cikī̀ nē" sound='ciki_ne'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text="mḕnēnḕ" sound='menene'/>
+    <TextWithPlay width='180' height='50' text="fensìr nē, pentì nē" sound='fensir_ne_penti_ne'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text="rānā cḕ" sound='rana_ce'/>
+    <TextWithPlay width='180' height='50' text="takwàs nē" sound='takwas_ne'/>
+  </TableRowOdd>
+</canvas>

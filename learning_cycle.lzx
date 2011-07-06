@@ -1,0 +1,4 @@
+﻿<canvas height='300'>
+  <resource src="resources/images/learning_cycle.swf" name="learning_cycle"/>
+  <view height='300' width='300' resource='learning_cycle' />
+  </canvas>

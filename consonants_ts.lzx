@@ -1,0 +1,24 @@
+﻿<canvas height="180" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/tsuntsu_ne.mp3" name="tsuntsu_ne"/>
+  <resource src="resources/pronunciation/tsutsa_ce.mp3" name="tsutsa_ce"/>
+  <resource src="resources/pronunciation/ya_tsotsa.mp3" name="ya_tsotsa" />
+  <resource src="resources/pronunciation/yatsa_ce.mp3" name="yatsa_ce" />
+  <resource src="resources/pronunciation/ya_nutse.mp3" name="ya_nutse" />
+  <resource src="resources/pronunciation/tsabta_ce.mp3" name="tsabta_ce" />
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='tsūntsū nḕ' sound='tsuntsu_ne'/>
+    <TextWithPlay width='150' height='50' text='yātsā̀ cē' sound='yatsa_ce'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text='tsūtsā̀ cē' sound='tsutsa_ce'/>
+    <TextWithPlay width='150' height='50' text='yā nutsḕ' sound='ya_nutse'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='yā tsṑtsā' sound='ya_tsotsa'/>
+    <TextWithPlay width='150' height='50' text='tsabtā̀ cē' sound='tsabta_ce'/>
+  </TableRowOdd>
+</canvas>

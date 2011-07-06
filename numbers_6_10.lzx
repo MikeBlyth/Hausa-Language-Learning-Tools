@@ -1,0 +1,20 @@
+﻿<canvas height="70" width="500" font='"Segoe UI", Calibri, Tahoma, "DejaVu Sans", "Helvetica Neue", Arial, "DejaVu Sans Condensed"'  fontsize="30" >
+  <include href='library' />
+  <resource src="resources/vocab/numbers/6.mp3" name="n6"/>
+  <resource src="resources/vocab/numbers/7.mp3" name="n7"/>
+  <resource src="resources/vocab/numbers/8.mp3" name="n8"/>
+  <resource src="resources/vocab/numbers/9.mp3" name="n9"/>
+  <resource src="resources/vocab/numbers/10.mp3" name="n10"/>
+  <resource src="resources/art/color_circle_2_2.png" name="circle_1"/>
+  <resource src="resources/art/color_circle_2_4.png" name="circle_2"/>
+  <resource src="resources/art/color_circle_2_6.png" name="circle_3"/>
+  <resource src="resources/art/color_circle_2A_8.png" name="circle_4"/>
+  <resource src="resources/art/color_circle_2A_A.png" name="circle_5"/>
+  <splash />
+  <simplelayout axis='x' spacing='10'/>
+  <NumberPic picture="circle_1" text='6'/>
+  <NumberPic picture="circle_2" text='7'/>
+  <NumberPic picture="circle_3" text='8'/>
+  <NumberPic picture="circle_4" text='9'/>
+  <NumberPic picture="circle_5" text='10'/>
+</canvas>

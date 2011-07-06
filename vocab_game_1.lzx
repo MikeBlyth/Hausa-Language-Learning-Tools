@@ -1,0 +1,48 @@
+﻿<canvas height="420" width="550" bgcolor='green' >
+  <resource src="resources/vocab/mutum.mp3" name="mutum"/>
+  <resource src="resources/images/old_man_with_headdress.jpg" name="man_1"/>
+  <resource src="resources/images/fulani_man.jpg" name="man_2"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <class name="SoundSlide" >
+	<attribute name="sound" type="string"/>
+	<attribute name="picture" type="string"/>
+	<view name='inner' stretches='both' onclick="playSound()">
+		<method name="playSound">
+		  lz.Audio.playSound(this.parent.sound);
+		</method>
+		<method name='change'>
+		  this.setAttribute('resource','man_1');
+		  this.resize()
+		</method>
+		<method name="resize">
+		  var vertScale=parent.height/this.resourceheight
+		  var horzScale=this.parent.width/this.resourcewidth
+		  if (vertScale &lt; horzScale) {
+		    reScale=vertScale
+			} else {
+			reScale=horzScale
+			}
+		  this.setAttribute('width',this.resourcewidth*reScale)
+		  this.setAttribute('height',this.resourceheight*reScale)
+		</method>
+		<method name="init">
+		  super.init(); //best practice to always call super.init() when declaring 
+		  this.setAttribute('resource',this.parent.picture)
+		  this.resize()
+		</method>
+	  </view>	  
+	  <view bgcolor='#FCC'>
+   	  <text onclick='this.parent.parent.inner.change()'>Next</text>
+	  </view>
+	</class>
+	<simplelayout axis='y' spacing='10'/>
+	<SoundSlide id='pic_1' name='pic_1n' picture='man_2' clip='false' x='20' y='40' width='400' height='200' sound='mutum' />
+    <SoundSlide picture='man_1' clip='false' x='20' y='40' width='400' height='200' sound='mutum' />
+ </canvas>
+  

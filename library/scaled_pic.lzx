@@ -1,0 +1,27 @@
+﻿<library>
+	<class name="ScaledPic" width='${parent.width}' height='${parent.height}' bgcolor="${parent.bgcolor}" >
+		<attribute name="picture" type="string"/>
+		<method name='init'>
+			super.init()
+			this.inner.init()
+		</method>
+		<view name='inner' stretches='both' align='center'>
+			<method name="resize">
+			  var vertScale=parent.height/this.resourceheight
+			  var horzScale=this.parent.width/this.resourcewidth
+			  if (vertScale &lt; horzScale) {
+				reScale=vertScale
+				} else {
+				reScale=horzScale
+				}
+			  this.setAttribute('width',this.resourcewidth*reScale)
+			  this.setAttribute('height',this.resourceheight*reScale)
+			</method>
+			<method name="init">
+			  super.init(); //best practice to always call super.init() when declaring 
+			  this.setAttribute('resource',this.parent.picture)
+			  this.resize()
+			</method>
+		</view>	  
+	</class>
+</library>

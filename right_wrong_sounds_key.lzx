@@ -1,0 +1,7 @@
+<canvas height="40" >
+  <resource src="resources/sounds/right1.mp3" name="right"/>
+  <resource src="resources/sounds/wrong2.mp3" name="wrong"/>
+  <simplelayout axis="x" spacing="10"/>
+    <button onclick="lz.Audio.playSound('right');">Right</button>
+    <button onclick="lz.Audio.playSound('wrong');">Wrong</button>
+</canvas>

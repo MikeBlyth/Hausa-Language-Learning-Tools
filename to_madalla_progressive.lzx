@@ -1,0 +1,22 @@
+﻿<canvas height='45'>
+  <resource src="resources/conversations/to_madalla_sai_wani_lokaci_mg.mp3" name="all"/>
+  <resource src="resources/conversations/to_madalla_sai_wani_.mp3" name="w4"/>
+  <resource src="resources/conversations/to_madalla_sai_.mp3" name="w3"/>
+  <resource src="resources/conversations/to_madalla_.mp3" name="w2"/>
+  <resource src="resources/conversations/to_.mp3" name="w1"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <simplelayout axis='x' spacing='20'/>
+  <PlayButton sound='all' />
+  <PlayButton sound='w4' />
+  <PlayButton sound='w3' />
+  <PlayButton sound='w2' />
+  <PlayButton sound='w1' />
+  </canvas>

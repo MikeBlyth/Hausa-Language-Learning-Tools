@@ -1,0 +1,30 @@
+﻿<canvas height="220" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/kare_ne.mp3" name="kare_ne"/>
+  <resource src="resources/pronunciation/yaro_ne.mp3" name="yaro_ne"/>
+  <resource src="resources/pronunciation/ya_farka.mp3" name="ya_farka" />
+  <resource src="resources/pronunciation/ana_ruwa.mp3" name="ana_ruwa" />
+  <resource src="resources/pronunciation/ya_rasa.mp3" name="ya_rasa" />
+  <resource src="resources/pronunciation/ya_rufe.mp3" name="ya_rufe" />
+  <resource src="resources/pronunciation/sarka_ce.mp3" name="sarka_ce" />
+  <resource src="resources/pronunciation/bera_ne.mp3" name="bera_ne" />
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='kàrē nḕ' sound='kare_ne'/>
+    <TextWithPlay width='150' height='50' text='yā rasā̀' sound='ya_rasa'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text='yārṑ nē' sound='yaro_ne'/>
+    <TextWithPlay width='150' height='50' text='yā rufḕ' sound='ya_rufe'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='yā far̃kà' sound='ya_farka'/>
+    <TextWithPlay width='150' height='50' text='sar̃ƙā̀ cē' sound='sarka_ce'/>
+  </TableRowOdd>
+  <TableRowEven >
+    <TextWithPlay width='150' height='50' text='anā̀ ruwā' sound='ana_ruwa'/>
+    <TextWithPlay width='150' height='50' text='ɓērā nḕ' sound='bera_ne'/>
+  </TableRowEven>
+</canvas>

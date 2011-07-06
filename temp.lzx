@@ -1,0 +1,16 @@
+<canvas width="400" height="300">
+<class name='Test' onclick='report()' ondblclick='report2()'>
+  <attribute name='ar' value='[7,8,9,10]' type='expression'/>
+  <method name='report'>
+		Debug.debug('color='+color+', ar='+ar+' with length='+ar.length)
+  </method>
+  <method name='report2'>
+		color='red'
+		this.setAttribute('ar', [1,2,3])
+		Debug.debug('Dbl: color=' +color+ ', ar='+ar+' with length='+ar.length)
+  </method>
+</class>
+
+<Test height='200' width='200' bgcolor='blue' />
+<Test height='200' width='200' bgcolor='green' x='200'/>
+</canvas>  

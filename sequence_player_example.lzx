@@ -1,0 +1,13 @@
+﻿<canvas width="400" height="300" >
+	<include href='library/sequence_player.lzx' />
+	<resource src="resources/photos/boy_2.jpg" name="boy_2"/>
+
+	  <view bgcolor='blue' width='100' height='100'>
+		<SequencePlayer id='player' resourceBase='resources/vocab/' />
+	  </view>  
+
+    <script>
+		player.load(['yaro','testx','yara'])
+		player.play()
+	</script>
+</canvas>

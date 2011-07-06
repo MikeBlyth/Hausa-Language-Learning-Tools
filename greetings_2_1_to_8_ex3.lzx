@@ -1,0 +1,112 @@
+﻿<canvas height="350" width="410" >
+  <resource src="resources/conversations/sannu_maigida_v.mp3" name="a1"/>
+  <resource src="resources/conversations/yauwa_sannu_mg.mp3" name="b1"/>
+  <resource src="resources/conversations/ina_gajiya_v.mp3" name="a2"/>
+  <resource src="resources/conversations/ba_gajiya_mg.mp3" name="b2"/>
+  <resource src="resources/conversations/yaya_uwargida_v.mp3" name="a3"/>
+  <resource src="resources/conversations/lafiya_lau_mg.mp3" name="b3"/>
+  <resource src="resources/conversations/yaya_yara_v.mp3" name="a4"/>
+  <resource src="resources/conversations/suna_lafiya_mg.mp3" name="b4"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <resource src="resources/images/voice_talk_40px.png" name="talk"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <simplelayout axis='y' spacing='20'/>
+	<view id='row_1'>
+		<simplelayout axis='x' spacing='15' />
+		<view id='col_1' width='73'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your greeting</text>
+		</view>
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5'/>
+			<PlayButton id='button_1' sound='a1' />
+			<text>Check</text>
+		</view>
+		<view  width='70'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Mimic</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b1' />
+			<text>Hear reply</text>
+		</view>
+	</view>
+	<view id='row_2'>
+		<simplelayout axis='x' spacing='15' />
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>...tiredness</text>
+		</view>
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='a2' />
+			<text>Check</text>
+		</view>
+		<view  width='70'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Mimic</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b2' />
+			<text>Hear reply</text>
+		</view>
+	</view>
+	<view id='row_3'>
+		<simplelayout axis='x' spacing='15' />
+		<view width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>...your wife</text>
+		</view>
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5'/>
+			<PlayButton id='button_3' sound='a3' />
+			<text>Check</text>
+		</view>
+		<view  width='70'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Mimic</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b3' />
+			<text>Hear reply</text>
+		</view>
+	</view>
+	<view id='row_4'>
+		<simplelayout axis='x' spacing='15' />
+		<view width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>...children</text>
+		</view>
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5'/>
+			<PlayButton id='button_4' sound='a4' />
+			<text>Check</text>
+		</view>
+		<view  width='70'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Mimic</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b4' />
+			<text>Hear reply</text>
+		</view>
+	</view>
+  </canvas>

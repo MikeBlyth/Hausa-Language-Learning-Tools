@@ -1,0 +1,9 @@
+
+*.swf
+/resources/vocab
+/resources/tone
+/resources/pronunciation
+/resources/photos
+/resources/minimal_pairs
+/resources/images
+/resources/conversations

@@ -1,0 +1,40 @@
+﻿<canvas height="460" width="400%" font='"Segoe UI", Calibri, Tahoma, "DejaVu Sans", "Helvetica Neue", Arial, "DejaVu Sans Condensed"'  fontsize="30" >
+  <include href='library' />
+  <resource src="resources/vocab/numbers/1.mp3" name="n1"/>
+  <resource src="resources/vocab/numbers/2.mp3" name="n2"/>
+  <resource src="resources/vocab/numbers/3.mp3" name="n3"/>
+  <resource src="resources/vocab/numbers/4.mp3" name="n4"/>
+  <resource src="resources/vocab/numbers/5.mp3" name="n5"/>
+  <resource src="resources/vocab/numbers/6.mp3" name="n6"/>
+  <resource src="resources/vocab/numbers/7.mp3" name="n7"/>
+  <resource src="resources/vocab/numbers/8.mp3" name="n8"/>
+  <resource src="resources/vocab/numbers/9.mp3" name="n9"/>
+  <resource src="resources/vocab/numbers/10.mp3" name="n10"/>
+  <resource src="resources/vocab/numbers/11.mp3" name="n11"/>
+  <resource src="resources/vocab/numbers/12.mp3" name="n12"/>
+  <resource src="resources/art/color_circle_2_1.png" name="circle_1"/>
+  <resource src="resources/art/color_circle_2_2.png" name="circle_2"/>
+  <resource src="resources/art/color_circle_2_4.png" name="circle_3"/>
+  <resource src="resources/art/color_circle_2_6.png" name="circle_4"/>
+  <resource src="resources/art/color_circle_2A_8.png" name="circle_5"/>
+  <resource src="resources/art/color_circle_2A_A.png" name="circle_6"/>
+  <resource src="resources/art/color_circle_2A_B.png" name="circle_7"/>
+  <resource src="resources/art/color_circle_2_C.png" name="circle_8"/>
+  <resource src="resources/art/color_circle_2_D.png" name="circle_9"/>
+  <resource src="resources/art/color_circle_2_E.png" name="circle_10"/>
+  <resource src="resources/art/color_circle_2_F.png" name="circle_11"/>
+  <resource src="resources/art/color_circle_2_G.png" name="circle_12"/>
+  <splash />
+  <NumberPic picture="circle_1" text='1' x='300' y='27'/>
+  <NumberPic picture="circle_2" text='2' x='373' y='100'/>
+  <NumberPic picture="circle_3" text='3' x='400' y='200'/>
+  <NumberPic picture="circle_4" text='4' x='373' y='300'/>
+  <NumberPic picture="circle_5" text='5' x='300' y='373'/>
+  <NumberPic picture="circle_6" text='6' x='200' y='400'/>
+  <NumberPic picture="circle_7" text='7' x='100' y='373'/>
+  <NumberPic picture="circle_8" text='8' x='27' y='300'/>
+  <NumberPic picture="circle_9" text='9' x='0' y='200'/>
+  <NumberPic picture="circle_10" text='10' x='27' y='100'/>
+  <NumberPic picture="circle_11" text='11' x='100' y='27'/>
+  <NumberPic picture="circle_12" text='12' x='200' y='0'/>
+</canvas>

@@ -1,0 +1,27 @@
+﻿<canvas height="200" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/fili_ne.mp3" name="fili_ne"/>
+  <resource src="resources/pronunciation/ya_fafe.mp3" name="ya_fafe"/>
+  <resource src="resources/pronunciation/ya_yi_fes.mp3" name="ya_yi_fes" />
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowHead height='30' >
+    <TextBox width='150' text='Hausa'/>
+	<TextBox width='300' text='Comments'/>
+  </TableRowHead>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='fīlī nḕ' sound='fili_ne'/>
+	<TextBox height='50' width='300'>
+	   This is a good example of the sound when it’s between an <i>f</i> and a <i>p</i>.
+	</TextBox>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text='yā fāfḕ' sound='ya_fafe'/>
+	<TextBox height='50' width='300'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='yā yi fes' sound='ya_yi_fes'/>
+	<TextBox height='50' width='300'/>
+  </TableRowOdd>
+</canvas>

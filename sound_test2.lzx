@@ -1,0 +1,9 @@
+<canvas height="450" width="100%">
+  <simplelayout axis="y" spacing="45"/>
+  <resource src="resources/english_permit.mp3" name="permit"/>
+  <resource src="resources/english_suspect.mp3" name="suspect"/>
+  <resource src="resources/english_incline.mp3" name="incline"/>
+  <resource src="resources/play_button.png" name="play"/>
+  <view resource="play" onclick="lz.Audio.playSound('permit');"/>
+  <view resource="play" onclick="lz.Audio.playSound('suspect');"/>
+</canvas>

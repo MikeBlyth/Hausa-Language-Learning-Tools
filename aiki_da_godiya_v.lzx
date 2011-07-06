@@ -1,0 +1,13 @@
+﻿<canvas height='45'>
+  <resource src="resources/conversations/aiki_da_godiya_v.mp3" name="aiki_da_godiya_v"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <PlayButton sound='aiki_da_godiya_v' />
+  </canvas>

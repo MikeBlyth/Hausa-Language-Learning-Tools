@@ -1,0 +1,29 @@
+<canvas height="150" width="100%">
+  <splash/>
+  <resource src="resources/tone/single_low.mp3" name="low"/>
+  <resource src="resources/tone/single_high.mp3" name="high"/>
+  <resource src="resources/tone/single_falling.mp3" name="falling"/>
+  <resource src="resources/play_button.png" name="play"/>
+  <simplelayout axis="y" spacing="5"/>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='150' height='45'>
+      <text>Low tone</text>
+	</view>  
+    <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('low');"/>
+  </view>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='150' height='45'>
+      <text>High tone</text>
+	</view>
+	<view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('high');"/>
+  </view>  
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='150' height='45'>
+      <text>Falling tone</text>
+	</view>
+	<view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('falling');"/>
+  </view>  
+</canvas>

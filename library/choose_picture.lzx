@@ -1,0 +1,160 @@
+﻿<library>
+	<include href='scaled_pic.lzx' />
+	<include href='sequence_player.lzx' />
+	<resource src='../resources/art/checkmark.png' name='checkmark'/>
+	<resource src='../resources/art/error.png' name='error'/>
+	<class name='ChoosePictureFrame' width='${parent.width}' height='${parent.height}'>
+		<attribute name='promptSound' type='string' />
+		<attribute name='wrongReply' type='string' />
+		<attribute name='rightReply' type='string' />
+		<attribute name='rightPrefix' type='string' />
+		<attribute name='wrongPrefix' type='string' />
+		<attribute name='rightDefault' type='string' />
+		<attribute name='wrongDefault' type='string' />
+		<attribute name='slideArray' value='[]' type='expression' />
+		<method name="playSound" args='ignore=null'>
+			lz.Audio.playSound(this.promptSound);
+		</method>
+		<handler name='onlastframe' reference='player'>
+			repeatButton.setAttribute('visible', true)
+			if (this['correct']) {
+				newPrompt()
+			} else {
+				lz.Timer.addTimer( new LzDelegate( this, "playSound" ), 700 );			
+			}
+		</handler>
+		<method name='youChose' args='sound, correction, panel'>
+			Debug.debug("prompt=" + promptSound + " and you chose "+panel.id+"=" + sound + ' ' + correction)
+			repeatButton.setAttribute('visible', false)
+			if (sound==this.promptSound) {
+			  var toPlay = []
+			  if (this.rightPrefix != undefined) { 
+				toPlay.push(this.rightPrefix) 
+				if (this.rightReply != undefined) { toPlay.push(this.rightReply)}
+			  } else {
+				if (this.rightReply != undefined) { 
+					toPlay.push(this.rightReply)
+				} else {
+					toPlay.push(this.rightDefault)
+				}
+			  }  
+			  var i, panels=[panel_1, panel_2, panel_3, panel_4]
+			  player.load(toPlay)
+			  this['correct']=true
+  			  new lz.view(panel, {name:'indicator', width:30, height:30, resource:'checkmark'});  
+			  for (i=0; i&lt;panels.length; i++) {
+				if (panels[i] != panel) {
+					panels[i].fade.setAttribute('start', true)
+				}
+			  }
+			} else {
+			  toPlay=[]
+			  if (this.wrongPrefix != undefined) {toPlay.push(this.wrongPrefix)}
+			  if (this.wrongReply!=undefined &amp;&amp; this.wrongReply!='') {
+			    toPlay.push(this.wrongReply)
+			  }	
+				Debug.debug('correction='+correction)
+				if (correction !=undefined &amp;&amp; correction!='') {
+			    toPlay.push(correction)
+			  }	
+			  if (toPlay.length>0) player.load(toPlay)
+			  this['correct']=false
+			  if (panel.indicator==undefined) {
+			    new lz.view(panel, {name:'indicator', width:30, height:30, resource:'error'});  
+			  }
+			}  
+			player.play()
+		</method>
+		<method name='loadSlides' args='newSlides'>
+			function randomSlide(slides){
+				var rslide
+				randomIndex = Math.floor(Math.random()*slides.length)
+				rslide=slides[randomIndex] // because splice doesn't return the value as an array
+				slides.splice(randomIndex,1) 
+				return rslide
+				}
+			var panels=[panel_1, panel_2, panel_3, panel_4]
+			var i, slide
+			this.slideArray=newSlides.slice()
+			Debug.debug('slideArray=('+this.slideArray+ ") length=" + this.slideArray.length)
+			for (i=0; i&lt;4; i++) {
+			  slide=randomSlide(newSlides)
+			  panels[i].load(slide)
+			}
+			newPrompt()
+		</method>
+		<method name='newPrompt'>
+			function randomSlide(slides){
+				var rslide
+				randomIndex = Math.floor(Math.random()*slides.length)
+				rslide=slides[randomIndex] // because splice doesn't return the value as an array
+				slides.splice(randomIndex,1) 
+				return rslide
+				}
+			function listSlides(slides) {
+				var j
+				s = ''
+				for (j=0; j&lt;slides.length; j++) {
+					s = s + slides[j][0] + '; '
+				}
+				return s
+			}
+			var panels=[panel_1, panel_2, panel_3, panel_4]
+			var i, slide
+			newSlides = this.slideArray.slice()
+			Debug.debug('At newPrompt start slides='+listSlides(newSlides))
+			for (i=0; i&lt;panels.length; i++) {
+			  slide=randomSlide(newSlides)
+				Debug.debug('chose '+slide[0])
+				Debug.debug('remaining='+listSlides(newSlides))
+			  panels[i].indicator.setAttribute('bgcolor','blue')
+			  panels[i].indicator.destroy()
+			  panels[i].setAttribute('opacity',0)
+			  panels[i].load(slide)
+			  panels[i].unfade.setAttribute('start', true)
+			}
+			for (i=0; i&lt;4; i++) {
+				if (panels[i].sound==this.promptSound) {
+				panels.splice(i,1) // delete from list so we won't choose same prompt again
+				}
+			}
+			targetPanel=panels[Math.floor(Math.random()*panels.length)]
+			this.setAttribute('promptSound', targetPanel.sound)
+			this.setAttribute('wrongReply', targetPanel.thisIsNot)
+			this.setAttribute('rightReply', targetPanel.thisIs)
+			lz.Timer.addTimer( new LzDelegate( this, "playSound" ), 700 );			
+			Debug.debug('end newPrompt')
+			</method>
+		<vbox name='mainVbox'>
+			<hbox>
+				<ChoosePicturePanel  id='panel_1' />	
+				<ChoosePicturePanel  id='panel_2' />
+			</hbox>
+			<hbox>
+				<ChoosePicturePanel id='panel_3' />
+				<ChoosePicturePanel id='panel_4' />
+			</hbox>
+		</vbox>
+		<button id='repeatButton' onclick='parent.playSound()' text='Sake faɗa' align='center' y='10' opacity='0.5' />
+		</class>
+	<class name='ChoosePicturePanel' extends='ScaledPic' width='${mainChooser.width/2}' height='${mainChooser.height/2}' 
+		onclick='report()' clip='true' bgcolor='blue' >
+		<animator name='fade' attribute='opacity' to='0.1' start='false' duration='500'  />
+		<animator name='unfade' attribute='opacity' to='1' start='false' duration='500'  />
+		<attribute name='sound' type='string' />
+		<attribute name='thisIs' type='string' />
+		<attribute name='thisIsNot' type='string' />
+		<method name='load' args='loadValues'>
+			this.setAttribute('picture', loadValues[0])
+			this.setAttribute('sound', loadValues[1])
+			this.setAttribute('thisIs', loadValues[2])
+			this.setAttribute('thisIsNot', loadValues[3])
+			this.init()
+		</method>
+		<method name='report'>
+			var myID=id
+			Debug.debug("report: id="+id + ' thisIs=' + this.thisIs)
+			mainChooser.youChose(this.sound, this.thisIs, this)
+		</method>
+	</class>
+</library>

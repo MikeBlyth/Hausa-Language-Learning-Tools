@@ -1,0 +1,141 @@
+﻿<library>
+	<resource src="../resources/art/arrow_white_left.png" name="left_arrow"/>
+	<resource src="../resources/art/arrow_white_right.png" name="right_arrow"/>
+    <class name="SlidePlayer" height='300' width='450' clip='true' bgcolor='#449'>
+		<attribute name='play_on_open' value='true' type='boolean' />
+		<attribute name='showCaption' value='true' type='boolean' />
+		var newFrame, currentFrame;
+		var slides
+
+		<method name='loadSlides' args='slideList'>
+			slides=slideList
+			var nextSlide=slides.shift()
+			slides.push(nextSlide)
+			newFrame=frameB;
+			currentFrame=frameA;
+			currentFrame.setAttribute('picture',nextSlide[1])
+			currentFrame.setAttribute('sound',nextSlide[0])
+			currentFrame.setAttribute('caption',nextSlide[2])
+			currentFrame.init()
+			slideOpened()
+		</method>
+		<method name='uncoverRight'>
+			var nextSlide=slides.shift()
+			newFrame.sendToBack()
+			slides.push(nextSlide)
+			hideButtons();
+			newFrame.setAttribute('picture',nextSlide[1]);
+			newFrame.setAttribute('sound',nextSlide[0]);
+			newFrame.setAttribute('caption',nextSlide[2])
+			newFrame.setAttribute('x',0);
+			newFrame.init();
+			currentFrame.outRight.setAttribute('started',true);
+			swapFrames();
+		</method>
+		<method name='coverLeft'>
+			var nextSlide=slides.pop()
+			slides.unshift(nextSlide)
+			// have to do it again to get to _previous_ slide, as current one is already at tail of array
+			nextSlide=slides.pop()
+			slides.push(nextSlide)
+			hideButtons();
+			newFrame.setAttribute('picture',nextSlide[1]);
+			newFrame.setAttribute('sound',nextSlide[0]);
+			newFrame.setAttribute('caption',nextSlide[2])
+			newFrame.setAttribute('x',0);
+			newFrame.init();
+			newFrame.setAttribute('x',this.width);
+			currentFrame.sendToBack();
+			newFrame.inLeft.setAttribute('started',true);
+			swapFrames();
+		</method>
+		<method name='hideButtons'>
+			this.nextArrow.setAttribute('visible',false)
+			this.prevArrow.setAttribute('visible',false)
+		</method>
+		<method name='showButtons'>
+			this.nextArrow.setAttribute('visible',true)
+			this.prevArrow.setAttribute('visible',true)
+		</method>
+		<method name='slideOpened'>
+			showButtons();
+			currentFrame.inner.playSound();
+		</method>
+		<method name='swapFrames'>
+			var tempFrame=currentFrame;
+			currentFrame=newFrame;
+			newFrame=tempFrame;
+		</method>
+		<SoundSlide name='frameB'  />
+		<SoundSlide name='frameA'  />
+		<view name='nextArrow' x='${parent.width-this.width-10}' valign='middle' 
+			resource='right_arrow' opacity='0.4' onclick='parent.uncoverRight()'>
+		</view>
+		<view name='prevArrow' x='10' valign='middle' 
+			resource='left_arrow' opacity='0.4' onclick='parent.coverLeft()'>
+		</view>
+	</class>
+	
+	<class name="ScaledPic" width='${parent.width}' height='${parent.height}' bgcolor="${parent.bgcolor}" >
+		<attribute name="picture" type="string"/>
+		<method name='init'>
+			super.init()
+			this.inner.init()
+		</method>
+		<view name='inner' stretches='both' align='center'>
+			<method name="resize">
+			  var vertScale=parent.height/this.resourceheight
+			  var horzScale=this.parent.width/this.resourcewidth
+			  if (vertScale &lt; horzScale) {
+				reScale=vertScale
+				} else {
+				reScale=horzScale
+				}
+			  this.setAttribute('width',this.resourcewidth*reScale)
+			  this.setAttribute('height',this.resourceheight*reScale)
+			</method>
+			<method name="init">
+			  super.init(); //best practice to always call super.init() when declaring 
+			  this.setAttribute('resource',this.parent.picture)
+			  this.resize()
+			</method>
+		</view>	  
+	</class>
+	<class name="SoundSlide" width='${parent.width}' height='${parent.height}' bgcolor="${parent.bgcolor}" >
+		<attribute name="sound" type="string"/>
+		<attribute name="picture" type="string"/>
+		<attribute name="caption" value='??' type="string"/>
+		<animator name="outRight" attribute="x" to="${parent.width}" duration="800" 
+				  start="false" onstop='parent.parent.slideOpened()' />
+		<animator name="inLeft" attribute="x" to='0' duration="800" 
+				  start="false" onstop='parent.parent.slideOpened()'/>
+		<method name='init'>
+			super.init()
+			this.inner.init()
+		</method>
+		<view name='inner' stretches='both' onclick="playSound()" align='center'>
+			<method name="playSound">
+			  lz.Audio.playSound(this.parent.sound);
+			</method>
+			<method name="resize">
+			  var vertScale=parent.height/this.resourceheight
+			  var horzScale=this.parent.width/this.resourcewidth
+			  if (vertScale &lt; horzScale) {
+				reScale=vertScale
+				} else {
+				reScale=horzScale
+				}
+			  this.setAttribute('width',this.resourcewidth*reScale)
+			  this.setAttribute('height',this.resourceheight*reScale)
+			</method>
+			<method name="init">
+			  super.init(); //best practice to always call super.init() when declaring 
+			  this.setAttribute('resource',this.parent.picture)
+			  this.resize()
+			</method>
+		</view>	  
+		<text name='captionView' bgcolor='#FCC' opacity='0.7' align='center' valign='bottom'
+				cornerradius='15'
+				fontsize='20'  text='${parent.caption}' />
+	</class>
+</library>

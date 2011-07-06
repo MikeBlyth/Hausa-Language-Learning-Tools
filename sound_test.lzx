@@ -1,0 +1,5 @@
+<canvas height="450" width="100%">
+    <view name="clickSfx" play="true" resource='resources/english_record.mp3'>
+    </view>
+	<view resource='resources/play_button.png'/>
+</canvas>

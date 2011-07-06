@@ -1,0 +1,23 @@
+﻿<canvas height="70" width="500" font='"Segoe UI", Calibri, Tahoma, "DejaVu Sans", "Helvetica Neue", Arial, "DejaVu Sans Condensed"'  fontsize="30" >
+  <include href='library' />
+  <resource src="resources/vocab/numbers/1.mp3" name="n1"/>
+  <resource src="resources/vocab/numbers/2.mp3" name="n2"/>
+  <resource src="resources/vocab/numbers/3.mp3" name="n3"/>
+  <resource src="resources/vocab/numbers/4.mp3" name="n4"/>
+  <resource src="resources/vocab/numbers/5.mp3" name="n5"/>
+  <resource src="resources/vocab/numbers/11.mp3" name="n11"/>
+  <resource src="resources/art/color_circle_2_1.png" name="circle_1"/>
+  <resource src="resources/art/color_circle_2A_3.png" name="circle_2"/>
+  <resource src="resources/art/color_circle_2_5.png" name="circle_3"/>
+  <resource src="resources/art/color_circle_2_7.png" name="circle_4"/>
+  <resource src="resources/art/color_circle_2_9.png" name="circle_5"/>
+  <resource src="resources/art/color_circle_2_B.png" name="circle_6"/>
+  <resource src="resources/art/color_circle_2_D.png" name="circle_9"/>
+  <resource src="resources/art/color_circle_2_F.png" name="circle_8"/>
+  <simplelayout axis='x' spacing='10'/>
+  <NumberPic picture="circle_1" text='1'/>
+  <NumberPic picture="circle_2" text='2'/>
+  <NumberPic picture="circle_3" text='3'/>
+  <NumberPic picture="circle_4" text='4'/>
+  <NumberPic picture="circle_5" text='5'/>
+</canvas>

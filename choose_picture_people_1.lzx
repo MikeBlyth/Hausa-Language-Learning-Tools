@@ -1,0 +1,38 @@
+﻿<canvas width="400" height="300"
+		font='Tahoma, Helvetica Neue, Times New Roman, Arial'  >
+	<include href='library/choose_picture.lzx' />
+	<!-- Spoken PROMPTS are the only needed words -->
+	<resource src="resources/vocab/mutum.mp3" name="mutum"/>
+	<resource src="resources/vocab/wannan_ba_mutum_bane.mp3" name="not_mutum"/>
+	<resource src="resources/vocab/yaro_fsi.mp3" name="yaro"/>
+	<resource src="resources/vocab/mata_mg.mp3" name="mata"/>
+	<resource src="resources/vocab/yarinya2.mp3" name="yarinya"/>
+	<resource src="resources/vocab/yara_fsi.mp3" name="yara"/>
+<!-- PHOTOS to be placed in panels -->
+	<resource src="resources/photos/man_2.jpg" name="man_1"/>
+	<resource src="resources/photos/fulani_man_400.jpg" name="man_2"/>
+	<resource src="resources/photos/boy_1.jpg" name="boy_1"/>
+	<resource src="resources/photos/boy_2.jpg" name="boy_2"/>
+	<resource src="resources/photos/girl_1.jpg" name="girl_1"/>
+	<resource src="resources/photos/girl_2.jpg" name="girl_2"/>
+	<resource src="resources/photos/woman_2_400.jpg" name="woman_2"/>
+	<resource src="resources/photos/woman_3_400.jpg" name="woman_1"/>
+	
+	<splash />
+	<SequencePlayer id='player' resourceBase='resources/vocab/' /> 
+<!--	<SequencePlayer id='player' resourceBase='../../conversations/' /> -->
+	
+	<ChoosePictureFrame id='mainChooser' wrongPrefix='a_a' />	
+	<script>
+		mainChooser.loadSlides([
+			['girl_1', 'yarinya', 'wannan_yarinya_ce', 'wannan_ba_yarinya_bace'],
+			['girl_2', 'yarinya', 'wannan_yarinya_ce', 'wannan_ba_yarinya_bace'],
+			['man_1', 'mutum', 'wannan_mutum_ne', 'wannan_ba_mutum_bane'],
+			['man_2', 'mutum', 'wannan_mutum_ne', 'wannan_ba_mutum_bane'],
+			['boy_1', 'yaro', 'wannan_yaro_ne', 'wannan_ba_yaro_bane'],
+			['boy_2', 'yaro', 'wannan_yaro_ne', 'wannan_ba_yaro_bane'],
+			['woman_1', 'mata', 'wannan_mata_ce', 'wannan_ba_mata_bace'],
+			['woman_2', 'mata', 'wannan_mata_ce', 'wannan_ba_mata_bace']
+		])
+	</script>
+</canvas>

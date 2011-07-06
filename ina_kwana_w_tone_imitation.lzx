@@ -1,0 +1,24 @@
+﻿<canvas height='160' width='80'>
+  <resource src="resources/conversations/ina_kwana_mg.mp3" name="ina_kwana_mg"/>
+  <resource src="resources/conversations/ina_kwana_tone_imitation.mp3" name="ina_kwana_tone_imitation"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <simplelayout axis='y' spacing='20'/>
+  <view width='80'>
+    <simplelayout axis='y' spacing='5'/>
+    <PlayButton sound='ina_kwana_tone_imitation' />
+	<text>Example</text>
+  </view>
+  <view width='80'>  
+    <simplelayout axis='y' spacing='5'/>
+    <PlayButton sound='ina_kwana_mg' />
+	<text>Do it yourself</text>
+  </view>
+  </canvas>

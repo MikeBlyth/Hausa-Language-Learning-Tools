@@ -1,0 +1,12 @@
+<canvas height='100' width='100%'>
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/conversations/ina_kwana_mg.mp3" name="ina_kwana_mg"/>
+  <resource src="resources/images/ina_kwana_tone_flat.png" name="ina_kwana_tone"/>
+  <view >
+    <simplelayout axis='x' spacing='20'/>
+    <view resource='ina_kwana_tone' />
+    <PlayButton valign='middle' resource='play_60' sound='ina_kwana_mg'/>
+  </view>
+</canvas>

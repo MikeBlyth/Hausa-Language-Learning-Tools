@@ -1,0 +1,76 @@
+﻿<canvas height="250" width="310" >
+  <resource src="resources/conversations/yaya_zafi_v.mp3" name="a1"/>
+  <resource src="resources/conversations/lokacinsa_ne_mg.mp3" name="b1"/>
+  <resource src="resources/conversations/to_sai_gobe_v.mp3" name="a2"/>
+  <resource src="resources/conversations/allah_ya_kai_mu_mg.mp3" name="b2"/>
+  <resource src="resources/conversations/amin_v.mp3" name="a3"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <resource src="resources/images/voice_talk_40px.png" name="talk"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <simplelayout axis='y' spacing='20'/>
+	<view id='row_1'>
+		<simplelayout axis='x' spacing='15' />
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton id='button_1' sound='a1' />
+			<text>Line 9</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b1' />
+			<text>Hear reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Repeat reply</text>
+		</view>
+	</view>
+	<view id='row_2'>
+		<simplelayout axis='x' spacing='15' />
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton id='button_2' sound='a2' />
+			<text>Line 11</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b2' />
+			<text>Hear reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Repeat reply</text>
+		</view>
+	</view>
+	<view id='row_3'>
+		<simplelayout axis='x' spacing='15' />
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton id='button_3' sound='a3' />
+			<text>Line 13</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Repeat</text>
+		</view>
+	</view>
+  </canvas>

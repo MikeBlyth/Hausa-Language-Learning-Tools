@@ -1,0 +1,49 @@
+﻿<canvas height="410" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/english_bat.mp3" name="bat"/>
+  <resource src="resources/pronunciation/english_button.mp3" name="button"/>
+  <resource src="resources/pronunciation/english_uh_oh.mp3" name="uh_oh" />
+  <resource src="resources/pronunciation/english_every_august.mp3" name="every_august" />
+  <resource src="resources/pronunciation/english_every_august_emph.mp3" name="every_august_emph" />
+  <resource src="resources/pronunciation/addua_ce.mp3" name="addua_ce" />
+  <resource src="resources/pronunciation/ya_amsa.mp3" name="ya_amsa" />
+  <resource src="resources/pronunciation/ya_na_iina.mp3" name="ya_na_iina" />
+  <resource src="resources/pronunciation/oda_ce.mp3" name="oda_ce" />
+  <simplelayout axis="x" spacing='30'/>
+  <view>
+	  <simplelayout axis="y" spacing='0'/>
+	  <TableRowHead>
+		<TextBox width='280' textalign='center' height='40' text='The Glottal Stop Sound in English' />
+	  </TableRowHead>    
+	  <TableRowOdd >
+		<TextWithPlay width='140' height='40' text="bat [bæ']" sound='bat'/>
+		<TextWithPlay width='140' height='40' text="button [bu'n̩]" sound='button'/>
+	  </TableRowOdd>
+	  <TableRowEven>
+		<TextWithPlay width='140' height='40' text='uh-oh' sound='uh_oh'/>
+		<TextBox width='140' height='40' text='' />
+	  </TableRowEven>
+	  <TableRowOdd >
+		<TextWithPlay width='280' height='40' text='everyaugustinottowa' sound='every_august'/>
+	  </TableRowOdd>
+	  <TableRowEven >
+		<TextWithPlay width='280' height='40' text="'every 'august 'in 'Ottowa" sound='every_august_emph'/>
+	  </TableRowEven>
+  </view>
+  <view>
+	  <simplelayout axis="y" spacing='0'/>
+	  <TableRowHead>
+		<TextBox width='280' textalign='center' height='40' text='The Glottal Stop in Hausa' />
+	  </TableRowHead>    
+	  <TableRowOdd >
+		<TextWithPlay width='140' height='40' text="'ōdā̀ cē" sound='oda_ce'/>
+		<TextWithPlay width='140' height='40' text="ya nā̀ ī̀'ī̀nā" sound='ya_na_iina'/>
+	  </TableRowOdd>
+	  <TableRowEven>
+		<TextWithPlay width='140' height='40' text="yā 'amsā̀" sound='ya_amsa'/>
+		<TextWithPlay width='140' height='40' text="'addu'à cē" sound='addua_ce'/>
+	  </TableRowEven>
+  </view>  
+</canvas>

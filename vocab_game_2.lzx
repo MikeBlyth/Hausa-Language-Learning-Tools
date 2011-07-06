@@ -1,0 +1,65 @@
+﻿<canvas height="420" width="550" 
+		font='Tahoma, Helvetica Neue, Times New Roman, Arial'  >
+	<include href='library/slide_player.lzx' />
+	<resource src="resources/vocab/mutum.mp3" name="mutum"/>
+	<resource src="resources/vocab/yaro_fsi.mp3" name="yaro"/>
+	<resource src="resources/vocab/mata_mg.mp3" name="mata"/>
+	<resource src="resources/vocab/yarinya2.mp3" name="yarinya"/>
+	<resource src="resources/vocab/yara_fsi.mp3" name="yara"/>
+	<resource src="resources/photos/man_2.jpg" name="man_1"/>
+	<resource src="resources/photos/nehemiah.jpg" name="man_3"/>
+	<resource src="resources/photos/fulani_man_400.jpg" name="man_2"/>
+	<resource src="resources/photos/boy_1.jpg" name="boy_1"/>
+	<resource src="resources/photos/boy_2.jpg" name="boy_2"/>
+	<resource src="resources/photos/boy_3.jpg" name="boy_3"/>
+	<resource src="resources/photos/girl_1.jpg" name="girl_1"/>
+	<resource src="resources/photos/girl_2.jpg" name="girl_2"/>
+	<resource src="resources/photos/girl_3.jpg" name="girl_3"/>
+	<resource src="resources/photos/children_1.jpg" name="children_1"/>
+	<resource src="resources/photos/children_2.jpg" name="children_2"/>
+	<resource src="resources/photos/children_3.jpg" name="children_3"/>
+	<resource src="resources/photos/pharmacy_woman.jpg" name="woman_1"/>
+	<resource src="resources/photos/woman_2_400.jpg" name="woman_2"/>
+	<resource src="resources/photos/woman_3_400.jpg" name="woman_3"/>
+  <SlidePlayer name='main' height='300' width='400' />
+  <script>
+	main.loadSlides([
+					['yaro','boy_1','yārṑ'],
+					['yarinya','girl_1','yārinyā̀'],
+					['yaro','boy_2','yārṑ'],
+					['yarinya','girl_2','yārinyā̀'],
+					['mata','woman_1','mā̀tā'], 
+					['mutum','man_1', 'mutûm'], 
+					['yarinya','girl_3','yārinyā̀'],
+					['yaro','boy_3','yārṑ'],
+					['mata','woman_2','mā̀tā'], 
+					['mutum','man_3', 'mutûm'], 
+					['yaro','boy_2','yārṑ'],
+					['yarinya','girl_1','yārinyā̀'],
+					['mutum','man_2', 'mutûm'], 
+					['mata','woman_3','mā̀tā'], 
+					['yarinya','girl_1','yārinyā̀'],
+					['mutum','man_2','mutûm'], 
+					['yara','children_1','yârā'],
+					['mutum','man_3','mutûm'], 
+					['mata','woman_2','mā̀tā'], 
+					['yara','children_2','yârā'],
+					['mata','woman_3','mā̀tā'],
+					['yaro','boy_2','yārṑ'],
+					['yara','children_3','yârā'],
+					['yaro','boy_1','yārṑ'],
+					['yara','children_1','yârā'],
+					['yaro','boy_2','yārṑ'],
+					['yarinya','girl_2','yārinyā̀'],
+					['yara','children_2','yârā'],
+					['yarinya','girl_3','yārinyā̀'],
+					['yara','children_1','yârā'],
+					['yara','children_2','yârā'],
+					['mata','woman_2','mā̀tā'], 
+					['yara','children_3','yârā'],
+					['mutum','man_3','mutûm'] 
+	])
+	
+  </script>
+</canvas>
+  

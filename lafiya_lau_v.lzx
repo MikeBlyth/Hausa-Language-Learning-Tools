@@ -1,0 +1,13 @@
+﻿<canvas height='45'>
+  <resource src="resources/conversations/lafiya_lau_(v).mp3" name="lafiya_lau"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <PlayButton sound='lafiya_lau' />
+  </canvas>

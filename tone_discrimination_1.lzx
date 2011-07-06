@@ -1,0 +1,133 @@
+<canvas height="500" width="100%">
+  <splash/>
+  <resource src="resources/tone/pairs/kwado_mutum_lh_lf.mp3" name="diff_1"/>
+  <resource src="resources/tone/pairs/ka_ta_hh.mp3" name="same_1"/>
+  <resource src="resources/tone/pairs/ba_so_h_h.mp3" name="same_2"/>
+  <resource src="resources/tone/pairs/duba_fadi_hl_hl.mp3" name="same_3"/>
+  <resource src="resources/tone/pairs/ji_sha_f_f.mp3" name="same_4"/>
+  <resource src="resources/tone/pairs/kuka_duba_hh_hh.mp3" name="same_5"/>
+  <resource src="resources/tone/pairs/sha_ya_f_f.mp3" name="same_6"/>
+  <resource src="resources/tone/pairs/ya_sha_h_h.mp3" name="same_7"/>
+  <resource src="resources/tone/pairs/ciki_ciki_hh_hl.mp3" name="diff_2"/>
+  <resource src="resources/tone/pairs/fadi_hl_hh.mp3" name="diff_3"/>
+  <resource src="resources/tone/pairs/haushi_hh_hl.mp3" name="diff_4"/>
+  <resource src="resources/tone/pairs/ji_ji_f_h.mp3" name="diff_5"/>
+  <resource src="resources/tone/pairs/kuka_hl_hh.mp3" name="diff_6"/>
+  <resource src="resources/tone/pairs/lalle_lalle_hh_hl.mp3" name="diff_7"/>
+  <resource src="resources/tone/pairs/so_so_h_f.mp3" name="diff_8"/>
+  <resource src="resources/tone/pairs/tsaye_tsari_hh_hl.mp3" name="diff_9"/>
+  <resource src="resources/tone/pairs/ya_sa_h_f.mp3" name="diff_9"/>
+  <resource src="resources/tone/pairs/ya_sa_h_f.mp3" name="diff_10"/>
+  <resource src="resources/tone/pairs/yawo_hl_hh.mp3" name="diff_11"/>
+  <resource src="resources/tone/pairs/yi_yi_h_f.mp3" name="diff_12"/>
+  <resource src="resources/images/play_40.png" name="play"/>
+  <resource src="resources/images/same_tone_100.png" name="same"/>
+  <resource src="resources/images/different_tone_100.png" name="different"/>
+  <resource src="resources/sounds/right1.mp3" name="right"/>
+  <resource src="resources/sounds/wrong2.mp3" name="wrong"/>
+	<simplelayout axis="x" spacing="70"/>
+	<view>
+	  <simplelayout axis="y" spacing="25"/>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_1');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_1');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_2');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_2');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_3');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	   <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_3');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	   <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_7');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_9');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	</view> 
+
+	<view>
+	  <simplelayout axis="y" spacing="25"/>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_4');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_4');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_5');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_5');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_6');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_7');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('same_6');"/>
+		<view resource="same" onclick="lz.Audio.playSound('right');"/>
+		<view resource="different" onclick="lz.Audio.playSound('wrong');"/>
+	  </view>
+	  <view>
+		<simplelayout axis="x" spacing="10"/>
+		<view resource="play" onclick="lz.Audio.playSound('diff_8');"/>
+		<view resource="same" onclick="lz.Audio.playSound('wrong');"/>
+		<view resource="different" onclick="lz.Audio.playSound('right');"/>
+	  </view>
+	</view> 
+
+</canvas>

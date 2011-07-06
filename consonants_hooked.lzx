@@ -1,0 +1,43 @@
+﻿<canvas height="240" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/haba_ce.mp3" name="haba_ce"/>
+  <resource src="resources/pronunciation/ya_bata.mp3" name="ya_bata"/>
+  <resource src="resources/pronunciation/daya_ne.mp3" name="daya_ne" />
+  <resource src="resources/pronunciation/kwado_ne.mp3" name="kwado_ne" />
+  <resource src="resources/pronunciation/danko_ne.mp3" name="danko_ne" />
+  <resource src="resources/pronunciation/ya_kulle.mp3" name="ya_kulle" />
+  <resource src="resources/pronunciation/ya_taba.mp3" name="ya_taba" />
+  <resource src="resources/pronunciation/kudi_ne.mp3" name="kudi_ne" />
+  <resource src="resources/pronunciation/bauna_ce.mp3" name="bauna_ce" />
+  <resource src="resources/pronunciation/ya_daga.mp3" name="ya_daga" />
+  <resource src="resources/pronunciation/zaki_ne.mp3" name="zaki_ne" />
+  <resource src="resources/pronunciation/kofa_ce.mp3" name="kofa_ce" />
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowHead>
+    <TextBox width='150'  text='Ɓ'/>
+    <TextBox width='150' text='Ɗ'/>
+    <TextBox width='150' text='Ƙ'/>
+  </TableRowHead>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='haɓà cḕ' sound='haba_ce'/>
+    <TextWithPlay width='150' height='50' text='ɗaya nḕ' sound='daya_ne'/>
+    <TextWithPlay width='150' height='50' text='yā ƙullḕ' sound='ya_kulle'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text='yā ɓatà' sound='ya_bata'/>
+    <TextWithPlay width='150' height='50' text='kwā̀ɗō nḕ' sound='kwado_ne'/>
+    <TextWithPlay width='150' height='50' text='danƙṑ nē' sound='danko_ne'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text='ɓauna cḕ' sound='bauna_ce'/>
+    <TextWithPlay width='150' height='50' text='kuɗī nḕ' sound='kudi_ne'/>
+    <TextWithPlay width='150' height='50' text='ƙōfā̀ cḕ' sound='kofa_ce'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text='yā taɓà' sound='ya_taba'/>
+    <TextWithPlay width='150' height='50' text='yā ɗagà' sound='ya_daga'/>
+    <TextWithPlay width='150' height='50' text='zaƙī nḕ' sound='zaki_ne'/>
+  </TableRowEven>
+</canvas>

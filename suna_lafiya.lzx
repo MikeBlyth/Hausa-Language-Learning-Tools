@@ -1,0 +1,19 @@
+﻿<div id="play"  class='play_left'>{swf;images/stories/hausa/flash/suna_lafiya_v.swf;[changeparams]width=100;height=50;[/changeparams]}</div>
+<h2 id="phrase" class="hausa_tone" lang="ha">Suna lafiya(Sunā̀ lāfiyā̀)</h2>
+<br clear="both" />
+<div id="tone_map"><img alt="suna lafiya tone map" src="images/stories/hausa/images/suna_lafiya.png" /></div>
+<div id="gloss">They're fine (literally, "wellness very good")</div>
+<div id="lex">
+<table border="0">
+<tbody>
+<tr class="odd_row">
+<td class="hausa_tone" lang="ha">sunā̀</td>
+<td>they are</td>
+</tr>
+<tr class="even_row">
+<td class="hausa_tone" lang="ha">lāfiyā̀</td>
+<td>wellness</td>
+</tr>
+</tbody>
+</table>
+</div>

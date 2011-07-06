@@ -1,0 +1,106 @@
+﻿<library>
+  <stylesheet>
+
+    TableRowEven {
+      bgcolor: #f5fff5
+    }
+
+    TableRowOdd {
+      bgcolor: #eeffee
+    }
+
+    TableRowHead {
+      bgcolor: #ccddcc
+    }
+
+  </stylesheet>
+
+    <resource src="../resources/images/play_40.png" name="play"/>
+    <resource src="../resources/images/play_40.png" name="play_40"/>
+    <resource src="../resources/images/play_50.png" name="play_50"/>
+    <resource src="../resources/images/play_60.png" name="play_60"/>
+	<class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+		<attribute name="sound" type="string"/>
+		<method name="playSound">
+		  lz.Audio.playSound(sound);
+		</method>
+	</class>
+
+	<class name='TableRow' font="Times New Roman" fontsize="14" bgcolor="$style{'bgcolor'}" >
+		<simplelayout axis="x" spacing="0"/>
+	</class>	
+
+	<class name='TableRowHead' extends='TableRow'/>
+	<class name='TableRowEven' extends='TableRow'/>
+	<class name='TableRowOdd' extends='TableRow'/>
+
+	<class name='TextBox' height='30' >
+		<attribute name="text" value='' type="html"/>
+		<attribute name="textalign" type="string"/>
+		<text x='5' valign='middle' textalign="${immediateparent.textalign}" multiline='true' text="${immediateparent.text + ' '}"/>
+		<drawview x='0' y='0' height="${immediateparent.height}" width="${immediateparent.width}" >
+        <handler name="oninit">
+          this.moveTo(0,0)
+          this.lineTo(0,this.height)
+          this.lineTo(this.width,this.height)
+          this.lineTo(this.width,0)
+          this.lineTo(0,0)
+          this.stroke(); 
+        </handler>
+      </drawview>
+    </class>
+
+	<class name='TextBoxNew_NotWorking' height='30' >
+		<attribute name="text" value='' type="html"/>
+		<simplelayout axis='y'/>
+		<view height='2' width="${immediateparent.width}" bgcolor='#444'/>
+		<view width='100'>
+  		  <simplelayout axis='x'/>
+		  <view height="${immediateparent.height}" width='2'  bgcolor='#444'/>
+		  <text x='5' valign='middle' multiline='true' text="${immediateparent.immediateparent.text + ' '}"/>
+		  <view height="${immediateparent.height}" width='2'  bgcolor='#444'/>
+		</view>  
+    	<view height='2' width="${immediateparent.width}" bgcolor='#444'/>
+    </class>
+
+    <class name='TextWithPlay' extends='TextBox' onclick="playSound()">
+		<attribute name='sound' type='string' />
+		<view resource='play' valign='middle' width='40' height='28' x="${parent.width-this.width-10}" y="${(immediateparent.height-this.height)/2}"/>
+		<method name="playSound">
+		  lz.Audio.playSound(sound);
+		</method>
+	</class>
+
+	<class name="SoundPic"  onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<attribute name="text" type="string"/>
+	<attribute name="text_color" type="string"/>
+	<attribute name="text_size" type="string"/>
+	<attribute name="picture" type="string"/>
+	<attribute name="text_align" type="string"/>
+	<attribute name="text_valign" type="string"/>
+	<method name="init">
+	  super.init(); //best practice to always call super.init() when declaring 
+	  this.image.setAttribute('resource',this.picture)
+	  this.resource = ''
+	  if (this.text_color) {this.caption.setAttribute('fgcolor',this.text_color)}
+	  if (this.text_style) {this.caption.setAttribute('fontstyle',this.text_style)}
+	  if (this.text_size) {this.caption.setAttribute('fontsize',this.text_size)}
+	  this.caption.setAttribute('fgcolor',this.text_color);
+	  if (this.caption.align=='center') {this.caption.setAttribute('xoffset',this.caption.fontsize*0.1)}
+	  if (this.caption.valign=='middle') {this.caption.setAttribute('yoffset',this.caption.fontsize*0.1)}
+	  </method>
+	<method name="playSound">
+	  lz.Audio.playSound(this.sound);
+	  Debug.write(this.sound)
+	</method>
+	<view name='image' width='${parent.width}' height='${parent.height}' stretches='both' />
+	<text name='caption' fgcolor='${parent.text_color}' fontstyle='bold' align='center' valign='middle' text='${parent.text}'/>
+  </class>
+  <class name="NumberPic" extends='SoundPic' width='60' height='60' text_color='#fff'>
+	<method name='init'>
+	  super.init();
+	  this.setAttribute('sound', 'n'+this.text)
+	</method>
+  </class>  
+</library>

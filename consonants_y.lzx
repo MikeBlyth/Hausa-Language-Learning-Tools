@@ -1,0 +1,26 @@
+﻿<canvas height="200" width="100%" >
+  <include href='library' />
+
+  <splash/>
+  <resource src="resources/pronunciation/yam_mata_ne.mp3" name="yam_mata_ne"/>
+  <resource src="resources/pronunciation/yan_sanda_ne.mp3" name="yan_sanda_ne"/>
+  <resource src="resources/pronunciation/ya_ya_ne.mp3" name="ya_ya_ne" />
+  <resource src="resources/pronunciation/ya_yanta_shi.mp3" name="ya_yanta_shi" />
+  <resource src="resources/pronunciation/yata_ce.mp3" name="yata_ce" />
+  <simplelayout axis="y" spacing='0'/>
+  <TableRowHead>
+    <TextBox width='300'  text="'Y Sound"/>
+  </TableRowHead>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text="'yam mātā nḕ" sound='yam_mata_ne'/>
+    <TextWithPlay width='150' height='50' text="'yan sàndā nḕ" sound='yan_sanda_ne'/>
+  </TableRowOdd>
+  <TableRowEven>
+    <TextWithPlay width='150' height='50' text="'yā'yā nḕ" sound='ya_ya_ne'/>
+    <TextWithPlay width='150' height='50' text="yā 'yantā̀ shī" sound='ya_yanta_shi'/>
+  </TableRowEven>
+  <TableRowOdd >
+    <TextWithPlay width='150' height='50' text="'yātā cḕ" sound='yata_ce'/>
+    <TextBox width='150' height='50' text=''/>
+  </TableRowOdd>
+</canvas>

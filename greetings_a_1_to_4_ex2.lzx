@@ -1,0 +1,62 @@
+﻿<canvas height="170" width="310" >
+  <resource src="resources/conversations/ina_kwana_mg.mp3" name="ina_kwana"/>
+  <resource src="resources/conversations/lafiya_lau_(v).mp3" name="lafiya_lau"/>
+  <resource src="resources/conversations/ina_gajiya_mg.mp3" name="ina_gajiya"/>
+  <resource src="resources/conversations/ba_gajiya_v.mp3" name="ba_gajiya"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <resource src="resources/images/voice_talk_40px.png" name="talk"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <simplelayout axis='y' spacing='20'/>
+	<view id='row_1'>
+		<simplelayout axis='x' spacing='15' />
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton id='button_1' sound='ina_kwana' />
+			<text>Line 1</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='lafiya_lau' />
+			<text>Hear reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Repeat reply</text>
+		</view>
+	</view>
+	<view id='row_2'>
+		<simplelayout axis='x' spacing='15' />
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='ina_gajiya' />
+			<text>Line 3</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='ba_gajiya' />
+			<text>Hear reply</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Repeat reply</text>
+		</view>
+	</view>
+  </canvas>

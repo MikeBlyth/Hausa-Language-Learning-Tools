@@ -1,0 +1,29 @@
+<canvas height="450" width="100%">
+  <resource src="resources/english_permit.mp3" name="permit"/>
+  <resource src="resources/english_suspect.mp3" name="suspect"/>
+  <resource src="resources/english_incline.mp3" name="incline"/>
+  <resource src="resources/english_tone_garbled.mp3" name="english_tone_garbled"/>
+  <resource src="resources/play_button.png" name="play"/>
+  <simplelayout axis="y" spacing="45"/>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='350' height='45'>
+      <view resource="resources/permit.png"/>
+	</view>  
+    <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('permit');"/>
+  </view>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='350' height='45'>
+      <view resource="resources/suspect.png"/>
+	</view>
+	<view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('suspect');"/>
+  </view>  
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='350' height='45'>
+      <view resource="resources/english_example_tone_only.png"/>
+	</view>
+	<view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('english_tone_garbled');"/>
+  </view>  
+</canvas>

@@ -1,0 +1,13 @@
+﻿<canvas height='45'>
+  <resource src="resources/conversations/to_madalla_sai_wani_lokaci_mg.mp3" name="to_madalla_sai_wani_lokaci_mg"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+
+  <splash/>
+  <PlayButton sound='to_madalla_sai_wani_lokaci_mg' />
+  </canvas>

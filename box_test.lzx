@@ -1,0 +1,54 @@
+﻿<canvas height="200" width="100%" bgcolor='#cfc'>
+  <resource src="resources/images/play_40.png" name="play"/>
+  <class name='TextBox' height='40' >
+	<attribute name="text" type="html"/>
+    <text x='5' valign='middle' text="${immediateparent.text + ' '}"/>
+    <drawview x='0' y='0' height="${immediateparent.height}" width="${immediateparent.width}" >
+        <handler name="oninit">
+         this.moveTo(0,0)
+         this.lineTo(0,this.height)
+         this.lineTo(this.width,this.height)
+         this.lineTo(this.width,0)
+         this.lineTo(0,0)
+         this.stroke(); 
+        </handler>
+      </drawview>
+  </class>
+  <class name='TextWithPlay' extends='TextBox' onclick="playSound()">
+    <attribute name='sound' type='string' />
+    <view resource='play' valign='middle' width='40' height='28' x="${parent.width-this.width-10}" y="${(immediateparent.height-this.height)/2}"/>
+    <method name="playSound">
+      lz.Audio.playSound("fili_ne");
+    </method>
+  </class>
+
+<resource src="resources/pronunciation/fili_ne.mp3" name="fili_ne"/>
+<simplelayout axis="y" spacing="0"/>
+<TextWithPlay width='150' height='30' text='fili ne' sound='fili_ne'/>
+  <TextBox text='This is in the box' />
+<view bgcolor='#ca0'>
+  <text text='Here is the text.'/>
+</view>
+      <drawview height="50" width="150" bgcolor='#DDD'>
+        <handler name="oninit">
+         this.moveTo(0,0)
+         this.lineTo(0,this.height)
+         this.lineTo(this.width,this.height)
+         this.lineTo(this.width,0)
+         this.lineTo(0,0)
+         this.stroke();
+        </handler>
+		<text align='center' valign='middle'>This is some text</text>
+      </drawview>
+      <drawview height="100" width="250" bgcolor='#DDD'>
+        <handler name="oninit">
+         this.moveTo(0,0)
+         this.lineTo(0,this.height)
+         this.lineTo(this.width,this.height)
+         this.lineTo(this.width,0)
+         this.lineTo(0,0)
+         this.stroke();
+        </handler>
+      </drawview>
+
+</canvas>

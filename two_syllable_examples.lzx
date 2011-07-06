@@ -1,0 +1,51 @@
+<canvas height="250" width="100%">
+  <splash/>
+  <resource src="resources/tone/high_low.mp3" name="high_low"/>
+  <resource src="resources/tone/high_high.mp3" name="high_high"/>
+  <resource src="resources/tone/low_high.mp3" name="low_high"/>
+  <resource src="resources/tone/low_low.mp3" name="low_low"/>
+  <resource src="resources/tone/low_falling.mp3" name="low_falling"/>
+  <resource src="resources/tone/falling_high.mp3" name="falling_high"/>
+  <resource src="resources/play_button.png" name="play"/>
+  <simplelayout axis="y" spacing="25"/>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('high_high');"/>
+      <text>high-high</text>
+	</view>  
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('high_low');"/>
+      <text>high-low</text>
+	</view>  
+  </view>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('low_high');"/>
+      <text>low-high</text>
+	</view>  
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('low_low');"/>
+      <text>low-low</text>
+	</view>  
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('low_falling');"/>
+      <text>low-falling</text>
+	</view>  
+  </view>
+  <view>
+    <simplelayout axis="x" spacing="10"/>
+	<view width='75' height='55'>
+	  <simplelayout axis='y' spacing = '5'/>
+      <view resource="play" stretches='both' height='40' width='40' onclick="lz.Audio.playSound('falling_high');"/>
+      <text>falling-high</text>
+	</view>  
+  </view>
+  
+</canvas>

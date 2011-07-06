@@ -1,0 +1,37 @@
+﻿<canvas height="80" width="410" >
+  <resource src="resources/conversations/to_madalla_sai_wani_lokaci_mg.mp3" name="a1"/>
+  <resource src="resources/conversations/yauwa_sai_wani_lokaci_v.mp3" name="b1"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <resource src="resources/images/voice_talk_40px.png" name="talk"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <simplelayout axis='y' spacing='20'/>
+	<view id='row_1'>
+		<simplelayout axis='x' spacing='15' />
+		<view id='col_1'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Your greeting</text>
+		</view>
+		<view  width='${col_1.width}'>
+			<simplelayout axis='y' spacing='5'/>
+			<PlayButton id='button_1' sound='a1' />
+			<text>Check</text>
+		</view>
+		<view  width='70'>
+			<simplelayout axis='y' spacing='5' />
+			<view height='${button_1.height}'  valign='middle' resource='talk'/>
+			<text>Mimic</text>
+		</view>
+		<view >
+			<simplelayout axis='y' spacing='5' />
+			<PlayButton sound='b1' />
+			<text>Hear reply</text>
+		</view>
+	</view>
+  </canvas>

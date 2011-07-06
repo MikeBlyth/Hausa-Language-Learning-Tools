@@ -1,0 +1,15 @@
+﻿<canvas height='200'>
+  <resource src="resources/conversations/yauwa_sai_wani_lokaci_v.mp3" name="test"/>
+  <simplelayout axis='y'/>
+  <view   bgcolor='#F00' height='45' width='45' resource='test' play='true'>
+
+       <handler name = "onlastframe">
+          //when the audio reaches the end, loop it
+          this.play(0); 
+		  this.x ++;
+      </handler>
+
+  </view>  
+  <view   bgcolor='#0F0' height='45' width='45'/>
+  
+  </canvas>

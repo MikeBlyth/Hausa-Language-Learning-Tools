@@ -1,0 +1,12 @@
+﻿<canvas height="45" width="60" >
+  <resource src="resources/conversations/to_sai_gobe_v.mp3" name="line"/>
+  <resource src="resources/images/play_60.png" name="play"/>
+  <class name="PlayButton" valign='middle' resource="play" width='60' onclick="playSound()">
+	<attribute name="sound" type="string"/>
+	<method name="playSound">
+	  lz.Audio.playSound(sound);
+	</method>
+  </class>
+  <splash/>
+  <PlayButton sound='line' />
+  </canvas>

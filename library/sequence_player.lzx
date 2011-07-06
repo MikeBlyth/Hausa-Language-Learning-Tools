@@ -1,0 +1,29 @@
+﻿<library>
+  <class name='SequencePlayer' >
+	<attribute name='resourceBase' value='' type='string' />
+	var clips, clip_play
+	<method name='load' args='newClips'>
+		clips=newClips
+		Debug.debug('SP loaded '+clips)
+	</method>
+	<method name='loadError' args='ignore=null'>
+		Debug.debug('Error loading!')
+		this.play()
+	</method>
+	<method name='play' args='ignore=null' >
+	  if (clip_play != undefined) {clip_play.destroy()}
+		next_clip=clips.shift()
+		if (next_clip==undefined) {
+			this.onlastframe.sendEvent()
+			return
+		}
+		for (i=0;i&lt;300;i++){} // some timing problem needs slight delay
+		clip_play = new lz.view(canvas, {
+		//	width:20, height:20, bgcolor:'red', // uncomment if you want to see box indicator while playing
+			resource:'http:' + resourceBase + next_clip + '.mp3' });  
+		new lz.Delegate(this, 'play', clip_play, 'onlastframe')
+		new lz.Delegate(this, 'loadError', clip_play, 'onerror')
+		Debug.debug('playing '+next_clip)
+	</method>
+  </class>
+</library>
